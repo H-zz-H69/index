@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-zz-H Cheats</title>
+    <style>
+        body {
+            background-color: black; 
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: hidden;
+            animation: fadeInBackground 0.5s ease-out forwards;
+            opacity: 0;
+            animation-delay: 0.24s; 
+        }
+
+        .container {
+            position: relative;
+            opacity: 0; 
+            animation: fadeInElements 0.5s ease-out forwards;
+            animation-delay: 2s;
+        }
+
+        @keyframes rotateAndMoveUp {
+            0% {
+                transform: rotate(0deg);
+                top: 150px; 
+            }
+            30% {
+                transform: rotate(45deg);
+                top: 120px; 
+            }
+            60% {
+                transform: rotate(-45deg);
+                top: 90px;
+            }
+            90% {
+                transform: rotate(0deg);
+                top: 60px; 
+            }
+            100% {
+                transform: rotate(0deg); 
+                top: 30px;
+            }
+        }
+
+        .image {
+            position: relative; 
+            top: 150px; 
+            width: 100px;
+            height: auto;
+            animation: rotateAndMoveUp 4s ease-in-out forwards; 
+            filter: drop-shadow(0 0 10px rgba(255, 20, 147, 0.2))
+                    drop-shadow(0 0 15px rgba(255, 20, 147, 0.15))
+                    drop-shadow(0 0 20px rgba(255, 20, 147, 0.1));
+        }
+
+        @keyframes fadeInBackground {
+            0% {
+                background-color: black;
+                opacity: 0;
+            }
+            100% {
+                background-color: black;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInElements {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .text {
+            font-size: 24px;
+            color: white;
+            margin-top: 50px;
+            opacity: 0;
+            animation: fadeInText 1s ease-out forwards;
+            animation-delay: 3s;
+            text-shadow: 0 0 5px rgba(255, 20, 147, 0.5), 0 0 10px rgba(255, 20, 147, 0.4), 0 0 15px rgba(255, 20, 147, 0.3);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 14px;
+            color: white;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInText 1s ease-out forwards;
+            animation-delay: 5s;
+            text-shadow: 0 0 5px rgba(255, 20, 147, 0.5), 0 0 10px rgba(255, 20, 147, 0.4), 0 0 15px rgba(255, 20, 147, 0.3);
+        }
+
+        footer a {
+            color: #FF1493; 
+            text-decoration: none;
+        }
+
+        .audio-button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .category-box {
+            background-color: rgba(255, 20, 147, 0.2);
+            border: 2px solid #FF1493;
+            padding: 20px;
+            margin: 15px;
+            width: 300px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+            animation: fadeInElements 1s ease-out forwards;
+            opacity: 0;
+            transition: all 0.3s ease-in-out; 
+        }
+
+        .category-box h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .category-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .category-box ul li {
+            margin: 5px 0;
+        }
+
+        .category-box:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.8), 0 0 30px rgba(255, 20, 147, 0.6);
+            background-color: rgba(255, 20, 147, 0.3);
+        }
+
+        .category-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 50px;
+            opacity: 0;  
+            animation: fadeInElements 1s ease-out forwards;
+            animation-delay: 6s; 
+        }
+
+        .category-box {
+            position: relative;
+            top: -50px; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="hzzh.png" alt="hzzh" class="image">
+
+        <button class="audio-button" onclick="toggleMusic()"></button>
+    </div>
+
+    <div class="text">
+        Welcome to H-zz-H Cheats!
+    </div>
+
+    <div class="category-container">
+        <div class="category-box">
+            <h3>Cheats</h3>
+            <ul>
+                <li>Counterstrike 2</li>
+                <li>Valorant</li>
+            </ul>
+        </div>
+
+        <div class="category-box">
+            <h3>Discord Tools</h3>
+            <ul>
+                <li>Discord Webhook Spammer</li>
+                <li>Discord RPC faker</li>
+            </ul>
+        </div>
+
+        <div class="category-box">
+            <h3>HWID</h3>
+            <ul>
+                <li>HWID-Changer</li>
+                <li>HWID-Checker</li>
+            </ul>
+        </div>
+
+        <div class="category-box">
+            <h3>Fun stuff</h3>
+            <ul>
+                <li>Kahoot Bot</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <h9>Top #1 Cheating Service</h9>
+        <p>&copy; 2024 H-zz-H Panel | <a href="users_expiration.json">Users Expirations</a> | <a href="loader_version.json">Current Version</a></p>
+    </footer>
+
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        let music = document.getElementById('music');
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+            } else {
+                music.play();
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+</body>
+</html>

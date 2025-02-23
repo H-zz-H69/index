@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-zz-H Cheats</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000; 
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 400px;
+            height: 200px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: pulse 3s infinite ease-in-out;
+            filter: drop-shadow(0 0 15px rgba(255, 20, 147, 0.3)); 
+        }
+
+        .image {
+            position: absolute;
+            top: -60px; 
+            width: 100px;
+            height: auto;
+            animation: rotate 4s ease-in-out forwards;
+            filter: drop-shadow(0 0 10px rgba(255, 20, 147, 0.2)) 
+                    drop-shadow(0 0 15px rgba(255, 20, 147, 0.15)) 
+                    drop-shadow(0 0 20px rgba(255, 20, 147, 0.1)); 
+        }
+
+        .letter {
+            font-size: 100px;
+            font-weight: bold;
+            color: #fff; 
+            text-shadow: 0 0 10px rgba(255, 20, 147, 0.3), 0 0 15px rgba(255, 20, 147, 0.2), 0 0 20px rgba(255, 20, 147, 0.1);
+            position: absolute;
+            animation: rotate 4s ease-in-out forwards, climb 2s infinite ease-in-out; 
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg); 
+            }
+        }
+
+        @keyframes climb {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px); 
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05); 
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Smooth fade-out transition */
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="hzzh.png" alt="HZZH Logo" class="image" id="logo">
+        <div class="letter">H-zz-H</div>
+    </div>
+
+    <script>
+        // Wenn die Animation der Rotation abgeschlossen ist, leite zur index1.html weiter
+        document.querySelector('.image').addEventListener('animationend', function() {
+            // Füge Fade-Out-Effekt hinzu
+            document.body.classList.add('fade-out');
+            setTimeout(function() {
+                // Nach der Fade-Out Animation weiterleiten
+                window.location.href = 'index1.html';
+            }, 1000);  // Warte, bis der Fade-Out abgeschlossen ist (1 Sekunde)
+        });
+    </script>
+</body>
+</html>
