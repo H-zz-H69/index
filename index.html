@@ -98,14 +98,11 @@
     </div>
 
     <script>
-        // Wenn die Animation der Rotation abgeschlossen ist, leite zur index1.html weiter
         document.querySelector('.image').addEventListener('animationend', function() {
-            // Füge Fade-Out-Effekt hinzu
             document.body.classList.add('fade-out');
             setTimeout(function() {
-                // Nach der Fade-Out Animation weiterleiten
                 window.location.href = 'index1.html';
-            }, 1000);  // Warte, bis der Fade-Out abgeschlossen ist (1 Sekunde)
+            }, 1000);
         });
     </script>
 </body>
