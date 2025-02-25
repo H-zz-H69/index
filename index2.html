@@ -191,6 +191,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+    <div class="container">
+        <img src="hzzh.png" alt="hzzh" class="image">
+
+        <button class="audio-button" onclick="toggleMusic()"></button>
+    </div>
+
+    <div class="text">
+        Welcome to H-zz-H Software!
+    </div>
   <a href="index.html">Back</a>
   <h1>Webhook Spammer</h1>
   <input type="url" id="webhookurl" value="" placeholder="Enter webhook URL">
@@ -254,6 +263,30 @@
         }
       });
     }
+  </script>
+  
+  <footer>
+        <h9>Top #1 Cheating Service</h9>
+        <p>&copy; 2024 H-zz-H | leck meine eier</p>
+  </footer>
+
+  <audio id="music" loop>
+      <source src="music.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+  </audio>
+
+  <script>
+      let music = document.getElementById('music');
+      let isPlaying = false;
+
+      function toggleMusic() {
+          if (isPlaying) {
+              music.pause();
+          } else {
+              music.play();
+          }
+          isPlaying = !isPlaying;
+      }
   </script>
 </body>
 </html>
