@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Webhook Tools Online | HzzH-Tools</title>
+  <title>H-zz-H Software</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -26,16 +26,15 @@
       padding-top: 20px;
     }
   </style>
-  <!-- jQuery included for the DELETE request -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
   <a href="index.html">Back</a>
   <h1>Webhook Spammer</h1>
-  <input type="url" id="webhookurl" value="Webhook-URL" placeholder="Enter webhook URL">
-  <input type="text" id="username" value="Username" placeholder="Enter username">
+  <input type="url" id="webhookurl" value="" placeholder="Enter webhook URL">
+  <input type="text" id="username" value="" placeholder="Enter username">
   <input type="url" id="avatar" value="https://i.pinimg.com/originals/7b/06/51/7b0651ae13f41c68cbd308a20d27caf8.jpg" placeholder="Avatar URL">
-  <input type="text" id="message" value="Message" placeholder="Enter message">
+  <input type="text" id="message" value="" placeholder="Enter message">
   <br>
   <button id="spammer" onclick="toggle()">Unlimited Spam: OFF</button>
   
@@ -47,10 +46,8 @@
   </div>
   
   <script>
-    // Spam interval variable
     let spamInterval = null;
     
-    // Function to send a message to the webhook
     function sending() {
       const webhookURL = document.getElementById('webhookurl').value;
       const username = document.getElementById('username').value;
@@ -70,32 +67,28 @@
       request.send(JSON.stringify(params));
     }
     
-    // Toggle spam on and off
     function toggle() {
       const spammerBtn = document.getElementById("spammer");
       if (!spamInterval) {
-        // Start spamming every 1000ms (1 second); adjust as necessary
         spamInterval = setInterval(sending, 1000);
         spammerBtn.textContent = "Unlimited Spam: ON";
       } else {
-        // Stop spamming
         clearInterval(spamInterval);
         spamInterval = null;
         spammerBtn.textContent = "Unlimited Spam: OFF";
       }
     }
     
-    // Function to delete the webhook
     function deleteWebhook() {
       const deleteurl = document.getElementById("deleteurl").value;
       $.ajax({
         type: "DELETE",
         url: deleteurl,
         success: function() {
-          alert("Webhook deleted successfully (if allowed by the server)!");
+          alert("Webhook deleted successfully!");
         },
         error: function() {
-          alert("Failed to delete webhook. Check the URL and CORS settings.");
+          alert("Failed to delete webhook. Check the URL.");
         }
       });
     }
