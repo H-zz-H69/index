@@ -1,12 +1,14 @@
 {
-  "users": [
+  "licenses": [
     {
-      "username": "23262f2b2c",
-      "password": "2c2b252523"
+      "license_key": "7a35382928290709371814213a2a263b", 
+      "username": "admin", 
+      "expiry_date": "2025-06-10"
     },
     {
-      "username": "0a6f38386f0a",
-      "password": "23262f2b2c68"
+      "license_key": "140f34730931342a34060d152a2f7003", 
+      "username": "guest", 
+      "expiry_date": "2025-06-10"
     }
   ]
 }
