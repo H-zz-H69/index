@@ -1,1 +1,12 @@
-
+{
+  "users": [
+    {
+      "username": "23262f2b2c",
+      "password": "2c2b252523"
+    },
+    {
+      "username": "0a6f38386f0a",
+      "password": "23262f2b2c68"
+    }
+  ]
+}
