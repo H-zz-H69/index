@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-zz-H Software</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeInBackground 0.5s ease-out forwards;
+            opacity: 0;
+            animation-delay: 0.24s;
+        }
+
+        .container {
+            position: relative;
+            opacity: 0;
+            animation: fadeInElements 0.5s ease-out forwards;
+            animation-delay: 2s;
+        }
+
+        .image {
+            position: relative;
+            top: 150px;
+            width: 100px;
+            height: auto;
+            animation: rotateAndMoveUp 4s ease-in-out forwards;
+            filter: drop-shadow(0 0 10px rgba(255, 20, 147, 0.2))
+                    drop-shadow(0 0 15px rgba(255, 20, 147, 0.15))
+                    drop-shadow(0 0 20px rgba(255, 20, 147, 0.1));
+        }
+
+        .text {
+            font-size: 24px;
+            color: white;
+            margin-top: 50px;
+            opacity: 0;
+            animation: fadeInText 1s ease-out forwards;
+            animation-delay: 3s;
+            text-shadow: 0 0 5px rgba(255, 20, 147, 0.5),
+                         0 0 10px rgba(255, 20, 147, 0.4),
+                         0 0 15px rgba(255, 20, 147, 0.3);
+        }
+
+        footer {
+            position: relative;
+            font-size: 14px;
+            color: white;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInText 1s ease-out forwards;
+            animation-delay: 5s;
+            text-shadow: 0 0 5px rgba(255, 20, 147, 0.5),
+                         0 0 10px rgba(255, 20, 147, 0.4),
+                         0 0 15px rgba(255, 20, 147, 0.3);
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: #FF1493;
+            text-decoration: none;
+        }
+
+        a {
+            color: pink;
+        }
+
+        a:hover {
+            color: hotpink;
+        }
+
+        .audio-button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        @keyframes rotateAndMoveUp {
+            0% { transform: rotate(0deg); top: 150px; }
+            30% { transform: rotate(45deg); top: 120px; }
+            60% { transform: rotate(-45deg); top: 90px; }
+            90% { transform: rotate(0deg); top: 60px; }
+            100% { transform: rotate(0deg); top: 30px; }
+        }
+
+        @keyframes fadeInBackground {
+            0% { background-color: black; opacity: 0; }
+            100% { background-color: black; opacity: 1; }
+        }
+
+        @keyframes fadeInElements {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .tabs-container {
+            margin-top: 50px;
+            animation: fadeInElements 1s ease-out forwards;
+            animation-delay: 6s;
+            opacity: 0;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            background-color: rgba(255, 20, 147, 0.2);
+            border: 2px solid #FF1493;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            text-shadow: 0 0 5px rgba(255, 20, 147, 0.5);
+            transition: all 0.3s ease-in-out;
+            border-radius: 8px;
+        }
+
+        .tab-button.active {
+            background-color: #FF1493;
+            color: black;
+        }
+
+        .tab-button:hover {
+            background-color: rgba(255, 20, 147, 0.3);
+            box-shadow: 0 0 15px rgba(255, 20, 147, 0.6);
+        }
+
+        .tab-content {
+            display: none;
+            color: white;
+            padding: 20px;
+            border: 2px solid #FF1493;
+            background-color: rgba(255, 20, 147, 0.1);
+            border-radius: 10px;
+            text-shadow: 0 0 5px rgba(255, 20, 147, 0.5);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="hzzh.png" alt="hzzh" class="image">
+        <button class="audio-button" onclick="toggleMusic()"></button>
+    </div>
+
+    <div class="text">
+        Welcome to H-zz-H Software!
+    </div>
+
+    <div class="tabs-container">
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'howto')">How to use?</button>
+            <button class="tab-button" onclick="openTab(event, 'commands')">All commands</button>
+        </div>
+
+<div id="howto" class="tab-content active">
+    <h3>How to Set Up H-zz-H RAT</h3>
+    <ol>
+        <li>Download the latest release from <a href="https://github.com/H-zz-H69/Discord-RAT/releases" target="_blank">GitHub</a>.</li>
+        <li>Install <strong>Python 3.9.11</strong>: <a href="https://www.python.org/downloads/release/python-3911/" target="_blank">Download here</a>.</li>
+        <li>Open your terminal or console and run: <code>pip install -r requirements.txt</code></li>
+        <li>Edit the file, go to <code>line 146</code>, and replace the bot token with your own.</li>
+        <li>Double-click <code>Start.bat</code> to launch the RAT.</li>
+    </ol>
+</div>
+
+<div id="commands" class="tab-content">
+    <h3>All Commands & Features</h3>
+
+    <h4>📊 System Info & Monitoring</h4>
+    <ul>
+        <li><code>!information</code> — Show system info 🖥️</li>
+        <li><code>!disk</code> — Check disk space 📦</li>
+        <li><code>!cpu</code> — View CPU usage ⚙️</li>
+        <li><code>!ram</code> — View RAM usage 💾</li>
+        <li><code>!overview</code> — Overview of CPU, RAM & disk 🛠️</li>
+        <li><code>!battery</code> — Check battery status 🔋</li>
+        <li><code>!publicip</code> — Victim's public IP 🌐</li>
+        <li><code>hwid</code> — Get hardware ID 🍕🍕</li>
+    </ul>
+
+    <h4>🌐 Network</h4>
+    <ul>
+        <li><code>!network</code> — List WiFi networks & saved passwords</li>
+        <li><code>!net_pass (wifi_name)</code> — Get password for a WiFi</li>
+        <li><code>!net</code> — Create/recreate botnet channel ⚡</li>
+        <li><code>!botnet (ip) (time) (method)</code> — Launch DDoS attack ⚡</li>
+    </ul>
+
+    <h4>📷 Visual Capture</h4>
+    <ul>
+        <li><code>!screen</code> — Take screenshot 🖼️</li>
+        <li><code>!webcam</code> — Capture webcam 📸</li>
+        <li><code>!recscreen (sec)</code> — Record screen for X seconds</li>
+        <li><code>!recwebcam (sec)</code> — Record webcam for X seconds</li>
+        <li><code>!recaudio (sec)</code> — Record audio 🎤</li>
+    </ul>
+
+    <h4>📁 File & Directory</h4>
+    <ul>
+        <li><code>!list</code> — List current directory files 📂</li>
+        <li><code>!cd (path)</code> — Change directory</li>
+        <li><code>!download (path)</code> — Download file (10MB) 📥</li>
+        <li><code>!download_ext (file.png)</code> — Download large file (100MB)</li>
+        <li><code>!upload (attachment) (!path!)</code> — Upload file (10MB)</li>
+        <li><code>!upload_ext (URL) (!path!)</code> — Upload from URL</li>
+        <li><code>!exec (path)</code> — Execute file</li>
+        <li><code>!encrypt (*)</code> — Encrypt files to .hzzh ⚽</li>
+    </ul>
+
+    <h4>⌨️ Keylogger</h4>
+    <ul>
+        <li><code>!keylog_start</code> — Start logging keys</li>
+        <li><code>!keylog_dump</code> — Show logged keys</li>
+        <li><code>!keylog_stop</code> — Stop keylogger</li>
+    </ul>
+
+    <h4>🎭 Execution & Tricks</h4>
+    <ul>
+        <li><code>!error (Title | Text)</code> — Show fake error ⚠️</li>
+        <li><code>!web_open (url)</code> — Open URL 🌍</li>
+        <li><code>!command (cmd)</code> — Run CMD command 💻</li>
+        <li><code>!shell (cmd)</code> — Run PowerShell command</li>
+        <li><code>!tasks</code> — List running tasks</li>
+        <li><code>!taskkill</code> — Kill task by name</li>
+        <li><code>!fakecmd (amount)</code> — Show fake CMDs</li>
+        <li><code>!cmdspam</code> — Spam CMDs until crash</li>
+        <li><code>!closeexplorer</code> — Hide desktop & taskbar 🤯</li>
+        <li><code>!minimize</code> — Simulate Win+D 👩‍💻</li>
+        <li><code>!clipboard</code> — Get clipboard contents 📋</li>
+        <li><code>!wallpaper (attachment.png)</code> — Change wallpaper 🖼️</li>
+        <li><code>!steam</code> — Get Steam info 🍕</li>
+        <li><code>!roblox</code> — Steal Roblox cookie 🎮</li>
+    </ul>
+
+    <h4>🔧 Persistence & Privilege</h4>
+    <ul>
+        <li><code>!startup</code> — Add to startup 🐀</li>
+        <li><code>!smartup</code> — Unknown path startup 🐀</li>
+        <li><code>!getadmin</code> — Request admin via UAC spam</li>
+        <li><code>!admin</code> — Check admin status</li>
+        <li><code>!closesession</code> — Close user sessions</li>
+        <li><code>!selfdestruct</code> — Remove RAT & traces 💣</li>
+    </ul>
+
+    <h4>🔐 Admin-Only</h4>
+    <ul>
+        <li><code>!taskmgr</code> — Disable Task Manager 🎰</li>
+        <li><code>!taskmgr_enable</code> — Enable Task Manager</li>
+        <li><code>!blocklist</code> — Block AV-related sites</li>
+        <li><code>!unblocklist</code> — Unblock AV-related sites</li>
+        <li><code>!nostartup</code> — Hide Startup folder access 🔒</li>
+        <li><code>!nostartup_disable</code> — Restore Startup folder 🔓</li>
+        <li><code>!critproc</code> — Make process critical 🆙</li>
+        <li><code>!uncritproc</code> — Remove critical status</li>
+        <li><code>!windef</code> — Disable Windows Defender 🛡️</li>
+        <li><code>!exclude_exe</code> — Exclude .exe files from Defender</li>
+        <li><code>!block</code> — Block/unblock mouse/keyboard</li>
+    </ul>
+
+    <h4>🧪 Troll Features</h4>
+    <ul>
+        <li><code>!screensaver</code> — Show fake screensaver</li>
+        <li><code>!floatpic (sec) (url)</code> — Floating unclosable image</li>
+        <li><code>!logout</code> — Log out user</li>
+        <li><code>!reverse</code> — Reverse mouse movement</li>
+        <li><code>!jumpscare</code> — Show loud scary popup</li>
+        <li><code>!cpufuck</code> — Max out CPU</li>
+        <li><code>!bluescreen</code> — Trigger BSOD</li>
+        <li><code>!shaking</code> — Shake mouse</li>
+        <li><code>playmp3</code> — Play attached MP3 🎵</li>
+    </ul>
+
+    <h4>💬 Discord Management</h4>
+    <ul>
+        <li><code>!purge (amount)</code> — Delete messages 🚮</li>
+        <li><code>!recreate (#channel)</code> — Delete & recreate channel 🔄</li>
+    </ul>
+</div>
+
+    <footer>
+        <h6>Top #1 Cheating Service</h6>
+        <p>&copy; 2024 H-zz-H | leck meine eier</p>
+    </footer>
+
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        let music = document.getElementById('music');
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+            } else {
+                music.play();
+            }
+            isPlaying = !isPlaying;
+        }
+
+        function openTab(evt, id) {
+            const contents = document.querySelectorAll('.tab-content');
+            const buttons = document.querySelectorAll('.tab-button');
+
+            contents.forEach(c => c.classList.remove('active'));
+            buttons.forEach(b => b.classList.remove('active'));
+
+            document.getElementById(id).classList.add('active');
+            evt.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
