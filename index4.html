@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>H-zz-H Software - ToDo List</title>
+    <style>
+        body {
+            background-color: black; 
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            overflow-y: auto;
+            animation: fadeInBackground 0.5s ease-out forwards;
+            opacity: 0;
+            animation-delay: 0.24s; 
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            opacity: 0; 
+            animation: fadeInElements 0.5s ease-out forwards;
+            animation-delay: 2s;
+            max-width: 960px;
+            width: 90%;
+            margin: 30px auto;
+            color: white;
+        }
+
+        @keyframes fadeInBackground {
+            0% {
+                background-color: black;
+                opacity: 0;
+            }
+            100% {
+                background-color: black;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInElements {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            color: #FF1493;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 20, 147, 0.7);
+        }
+
+        .todo-category {
+            background-color: rgba(255, 20, 147, 0.2);
+            border: 2px solid #FF1493;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+            border-radius: 8px;
+        }
+
+        .todo-category h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 22px;
+            text-shadow: 0 0 5px rgba(255, 20, 147, 0.7);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 16px;
+            line-height: 1.3;
+        }
+
+        label {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 12px;
+            transform: scale(1.3);
+            accent-color: #FF1493;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+
+        footer {
+            font-size: 14px;
+            color: white;
+            text-align: center;
+            opacity: 0.7;
+            padding: 10px 0;
+            text-shadow: 0 0 5px rgba(255, 20, 147, 0.5);
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ToDo Feature List</h1>
+
+        <div class="todo-category">
+            <h2>🛠 On Startup Behavior</h2>
+            <ul>
+                <li><label><input type="checkbox" id="startup-regedit" /> Adds itself in startup: regedit under "Run"</label></li>
+                <li><label><input type="checkbox" id="startup-shell" /> Adds itself in startup: shell:startup folder</label></li>
+                <li><label><input type="checkbox" id="auto-stealer" /> Auto-Stealer: Steals Discord tokens, browser cookies, Steam username, and more on first launch</label></li>
+                <li><label><input type="checkbox" id="discord-injection" /> Discord Injection: Injects JavaScript to track password changes and capture new + old tokens</label></li>
+                <li><label><input type="checkbox" id="instance-check" /> Checks for existing instances: terminates the one with lower permissions if already running</label></li>
+            </ul>
+        </div>
+
+        <div class="todo-category">
+            <h2>🔧 Commands</h2>
+            <h3>🎯 Stealers</h3>
+            <ul>
+                <li><label><input type="checkbox" id="cmd-token" /> !token – Steals Discord token</label></li>
+                <li><label><input type="checkbox" id="cmd-roblox" /> !roblox – Steals Roblox cookies</label></li>
+                <li><label><input type="checkbox" id="cmd-browser" /> !browser – Steals browser history, passwords, credit cards, and cookies</label></li>
+            </ul>
+
+            <h3>📸 Surveillance</h3>
+            <ul>
+                <li><label><input type="checkbox" id="cmd-screenshot" /> !screenshot – Takes a screenshot of the desktop</label></li>
+                <li><label><input type="checkbox" id="cmd-webcam" /> !webcam – Captures a webcam photo</label></li>
+                <li><label><input type="checkbox" id="cmd-information" /> !information – Displays basic system information</label></li>
+            </ul>
+
+            <h3>🔐 Privilege Escalation</h3>
+            <ul>
+                <li><label><input type="checkbox" id="cmd-getadmin" /> !getadmin – Prompts UAC until user accepts</label></li>
+                <li><label><input type="checkbox" id="cmd-uacbypass" /> !uacbypass – Gains admin rights without UAC</label></li>
+                <li><label><input type="checkbox" id="cmd-admin" /> !admin – Checks for admin permissions</label></li>
+            </ul>
+
+            <h3>⚔️ System Manipulation</h3>
+            <ul>
+                <li><label><input type="checkbox" id="cmd-bluescreen" /> !bluescreen – Forces a Blue Screen of Death</label></li>
+                <li><label><input type="checkbox" id="cmd-critproc" /> !critproc – Marks process as critical (causes BSOD if killed)</label></li>
+                <li><label><input type="checkbox" id="cmd-shutdown" /> !shutdown – Shuts down the victim’s computer</label></li>
+            </ul>
+
+            <h3>🚫 Disabling Protections</h3>
+            <ul>
+                <li><label><input type="checkbox" id="cmd-exclude-exe" /> !exclude_exe – Excludes .exe files from Windows Defender</label></li>
+                <li><label><input type="checkbox" id="cmd-windef" /> !windef – Enables/disables Windows Defender</label></li>
+                <li><label><input type="checkbox" id="cmd-blocklist" /> !blocklist – Blocks access to antivirus websites</label></li>
+                <li><label><input type="checkbox" id="cmd-taskmgr" /> !taskmgr – Enables/disables Task Manager</label></li>
+                <li><label><input type="checkbox" id="cmd-nostartup" /> !nostartup – Prevents user from accessing the startup folder</label></li>
+                <li><label><input type="checkbox" id="cmd-no-reset" /> !no_reset – Disables the "Reset this PC" option</label></li>
+            </ul>
+
+            <h3>🧨 Destructive Actions</h3>
+            <ul>
+                <li><label><input type="checkbox" id="cmd-encrypt" /> !encrypt (dir/*) – Encrypts files with .hzzh extension</label></li>
+                <li><label><input type="checkbox" id="cmd-selfdestruct" /> !selfdestruct – Deletes all files and cleans traces</label></li>
+            </ul>
+
+            <h3>📂 File & Directory Control</h3>
+            <ul>
+                <li><label><input type="checkbox" id="cmd-list" /> !list – Lists files in the current directory</label></li>
+                <li><label><input type="checkbox" id="cmd-cd" /> !cd – Changes working directory</label></li>
+                <li><label><input type="checkbox" id="cmd-exec" /> !exec (path) – Executes a file at a given path</label></li>
+                <li><label><input type="checkbox" id="cmd-download" /> !download – Downloads a file from the victim’s PC</label></li>
+                <li><label><input type="checkbox" id="cmd-upload" /> !upload – Uploads a file to the victim’s PC</label></li>
+            </ul>
+
+            <h3>📊 Task Management</h3>
+            <ul>
+                <li><label><input type="checkbox" id="cmd-tasks" /> !tasks – Lists all running tasks</label></li>
+                <li><label><input type="checkbox" id="cmd-taskkill" /> !taskkill "task" – Kills a specified task</label></li>
+                <li><label><input type="checkbox" id="cmd-shell" /> !shell "cmd" – Executes a shell command</label></li>
+                <li><label><input type="checkbox" id="cmd-cmd" /> !cmd "cmd" – Executes a CMD command</label></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 H-zz-H | leck meine eier</p>
+    </footer>
+</body>
+</html>
