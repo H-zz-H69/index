@@ -117,9 +117,9 @@
         <div class="todo-category">
             <h2>🛠 On Startup Behavior</h2>
             <ul>
-                <li><label><input type="checkbox" id="startup-regedit" /> Adds itself in startup: regedit under "Run"</label></li>
-                <li><label><input type="checkbox" id="startup-shell" /> Adds itself in startup: shell:startup folder</label></li>
-                <li><label><input type="checkbox" id="auto-stealer" /> Auto-Stealer: Steals Discord tokens, browser cookies, Steam username, and more on first launch</label></li>
+                <li><label><input type="checkbox" id="startup-regedit" checked /> Adds itself in startup: regedit under "Run"</label></li>
+                <li><label><input type="checkbox" id="startup-shell" checked /> Adds itself in startup: shell:startup folder</label></li>
+                <li><label><input type="checkbox" id="auto-stealer" checked /> Auto-Stealer: Steals Discord tokens, browser cookies, Steam username, and more on first launch</label></li>
                 <li><label><input type="checkbox" id="discord-injection" /> Discord Injection: Injects JavaScript to track password changes and capture new + old tokens</label></li>
                 <li><label><input type="checkbox" id="instance-check" /> Checks for existing instances: terminates the one with lower permissions if already running</label></li>
             </ul>
@@ -129,39 +129,39 @@
             <h2>🔧 Commands</h2>
             <h3>🎯 Stealers</h3>
             <ul>
-                <li><label><input type="checkbox" id="cmd-token" /> !token – Steals Discord token</label></li>
-                <li><label><input type="checkbox" id="cmd-roblox" /> !roblox – Steals Roblox cookies</label></li>
+                <li><label><input type="checkbox" id="cmd-token" checked /> !token – Steals Discord token</label></li>
+                <li><label><input type="checkbox" id="cmd-roblox" checked /> !roblox – Steals Roblox cookies</label></li>
                 <li><label><input type="checkbox" id="cmd-browser" /> !browser – Steals browser history, passwords, credit cards, and cookies</label></li>
             </ul>
 
             <h3>📸 Surveillance</h3>
             <ul>
-                <li><label><input type="checkbox" id="cmd-screenshot" /> !screenshot – Takes a screenshot of the desktop</label></li>
-                <li><label><input type="checkbox" id="cmd-webcam" /> !webcam – Captures a webcam photo</label></li>
+                <li><label><input type="checkbox" id="cmd-screenshot" checked /> !screenshot – Takes a screenshot of the desktop</label></li>
+                <li><label><input type="checkbox" id="cmd-webcam" checked /> !webcam – Captures a webcam photo</label></li>
                 <li><label><input type="checkbox" id="cmd-information" /> !information – Displays basic system information</label></li>
             </ul>
 
             <h3>🔐 Privilege Escalation</h3>
             <ul>
-                <li><label><input type="checkbox" id="cmd-getadmin" /> !getadmin – Prompts UAC until user accepts</label></li>
-                <li><label><input type="checkbox" id="cmd-uacbypass" /> !uacbypass – Gains admin rights without UAC</label></li>
-                <li><label><input type="checkbox" id="cmd-admin" /> !admin – Checks for admin permissions</label></li>
+                <li><label><input type="checkbox" id="cmd-getadmin" checked /> !getadmin – Prompts UAC until user accepts</label></li>
+                <li><label><input type="checkbox" id="cmd-uacbypass" checked /> !uacbypass – Gains admin rights without UAC</label></li>
+                <li><label><input type="checkbox" id="cmd-admin" checked /> !admin – Checks for admin permissions</label></li>
             </ul>
 
             <h3>⚔️ System Manipulation</h3>
             <ul>
-                <li><label><input type="checkbox" id="cmd-bluescreen" /> !bluescreen – Forces a Blue Screen of Death</label></li>
-                <li><label><input type="checkbox" id="cmd-critproc" /> !critproc – Marks process as critical (causes BSOD if killed)</label></li>
-                <li><label><input type="checkbox" id="cmd-shutdown" /> !shutdown – Shuts down the victim’s computer</label></li>
+                <li><label><input type="checkbox" id="cmd-bluescreen" checked /> !bluescreen – Forces a Blue Screen of Death</label></li>
+                <li><label><input type="checkbox" id="cmd-critproc" checked /> !critproc – Marks process as critical (causes BSOD if killed)</label></li>
+                <li><label><input type="checkbox" id="cmd-shutdown" checked /> !shutdown – Shuts down the victim’s computer</label></li>
             </ul>
 
             <h3>🚫 Disabling Protections</h3>
             <ul>
-                <li><label><input type="checkbox" id="cmd-exclude-exe" /> !exclude_exe – Excludes .exe files from Windows Defender</label></li>
-                <li><label><input type="checkbox" id="cmd-windef" /> !windef – Enables/disables Windows Defender</label></li>
-                <li><label><input type="checkbox" id="cmd-blocklist" /> !blocklist – Blocks access to antivirus websites</label></li>
-                <li><label><input type="checkbox" id="cmd-taskmgr" /> !taskmgr – Enables/disables Task Manager</label></li>
-                <li><label><input type="checkbox" id="cmd-nostartup" /> !nostartup – Prevents user from accessing the startup folder</label></li>
+                <li><label><input type="checkbox" id="cmd-exclude-exe" checked /> !exclude_exe – Excludes .exe files from Windows Defender</label></li>
+                <li><label><input type="checkbox" id="cmd-windef" checked /> !windef – Enables/disables Windows Defender</label></li>
+                <li><label><input type="checkbox" id="cmd-blocklist" checked /> !blocklist – Blocks access to antivirus websites</label></li>
+                <li><label><input type="checkbox" id="cmd-taskmgr" checked /> !taskmgr – Enables/disables Task Manager</label></li>
+                <li><label><input type="checkbox" id="cmd-nostartup" checked /> !nostartup – Prevents user from accessing the startup folder</label></li>
                 <li><label><input type="checkbox" id="cmd-no-reset" /> !no_reset – Disables the "Reset this PC" option</label></li>
             </ul>
 
@@ -173,18 +173,18 @@
 
             <h3>📂 File & Directory Control</h3>
             <ul>
-                <li><label><input type="checkbox" id="cmd-list" /> !list – Lists files in the current directory</label></li>
-                <li><label><input type="checkbox" id="cmd-cd" /> !cd – Changes working directory</label></li>
-                <li><label><input type="checkbox" id="cmd-exec" /> !exec (path) – Executes a file at a given path</label></li>
-                <li><label><input type="checkbox" id="cmd-download" /> !download – Downloads a file from the victim’s PC</label></li>
-                <li><label><input type="checkbox" id="cmd-upload" /> !upload – Uploads a file to the victim’s PC</label></li>
+                <li><label><input type="checkbox" id="cmd-list" checked /> !list – Lists files in the current directory</label></li>
+                <li><label><input type="checkbox" id="cmd-cd" checked /> !cd – Changes working directory</label></li>
+                <li><label><input type="checkbox" id="cmd-exec" checked /> !exec (path) – Executes a file at a given path</label></li>
+                <li><label><input type="checkbox" id="cmd-download" checked /> !download – Downloads a file from the victim’s PC</label></li>
+                <li><label><input type="checkbox" id="cmd-upload" checked /> !upload – Uploads a file to the victim’s PC</label></li>
             </ul>
 
             <h3>📊 Task Management</h3>
             <ul>
                 <li><label><input type="checkbox" id="cmd-tasks" /> !tasks – Lists all running tasks</label></li>
                 <li><label><input type="checkbox" id="cmd-taskkill" /> !taskkill "task" – Kills a specified task</label></li>
-                <li><label><input type="checkbox" id="cmd-shell" /> !shell "cmd" – Executes a shell command</label></li>
+                <li><label><input type="checkbox" id="cmd-shell" checked /> !shell "cmd" – Executes a shell command</label></li>
                 <li><label><input type="checkbox" id="cmd-cmd" /> !cmd "cmd" – Executes a CMD command</label></li>
             </ul>
         </div>
@@ -195,3 +195,4 @@
     </footer>
 </body>
 </html>
+
