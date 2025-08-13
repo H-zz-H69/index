@@ -1,17 +1,13 @@
 {
   "CSGO": {
     "status": "undetected",
-    "Stable": "01.08.2025",
-    "Beta": "10.08.2025"
+    "Stable": { "date": "13.08.2025", "url": "https://github.com/.../csgo_stable.dll" }
   },
   "CS2": {
     "status": "undetected",
-    "Stable": "01.08.2025"
+    "Stable": { "date": "13.08.2025", "url": "https://github.com/.../cs2_stable.dll" }
   },
   "Updates": [
-    {
-      "date": "13.08.2025",
-      "text": "Release V1."
-    }
+    { "date": "13.08.2025", "text": "Release V1." }
   ]
 }
