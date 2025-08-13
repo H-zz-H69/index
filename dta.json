@@ -2,34 +2,16 @@
   "CSGO": {
     "status": "undetected",
     "Stable": "01.08.2025",
-    "Beta": "10.08.2025",
-    "Dev": "13.08.2025"
+    "Beta": "10.08.2025"
   },
   "CS2": {
     "status": "undetected",
-    "Stable": "01.08.2025",
-    "Beta": "10.08.2025"
+    "Stable": "01.08.2025"
   },
   "Updates": [
     {
-      "date": "01.08.2025",
-      "text": "Initial release of Stable version."
-    },
-    {
-      "date": "03.08.2025",
-      "text": "Fixed minor bugs in CSGO injection."
-    },
-    {
-      "date": "05.08.2025",
-      "text": "Updated CS2 menu visuals and performance improvements."
-    },
-    {
-      "date": "07.08.2025",
-      "text": "Patched detection issues and updated loader stability."
-    },
-    {
-      "date": "09.08.2025",
-      "text": "Added version selector for future updates."
+      "date": "13.08.2025",
+      "text": "Release V1."
     }
   ]
 }
