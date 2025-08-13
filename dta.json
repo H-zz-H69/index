@@ -1,14 +1,13 @@
 {
   "CSGO": {
     "status": "undetected",
-    "Stable": { "date": "01.08.2025" },
-    "Beta":   { "date": "10.08.2025" }
+    "Stable": "01.08.2025"
   },
   "CS2": {
     "status": "undetected",
-    "Stable": { "date": "01.08.2025" }
+    "Stable": "01.08.2025"
   },
   "Updates": [
-    { "date": "13.08.2025", "text": "Release V1." }
+    { "date": "13.08.2025", "text": "Release of V1." }
   ]
 }
