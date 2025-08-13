@@ -1,11 +1,11 @@
 {
   "CSGO": {
     "status": "undetected",
-    "Stable": "01.08.2025"
+    "Stable": "13.08.2025"
   },
   "CS2": {
     "status": "undetected",
-    "Stable": "01.08.2025"
+    "Stable": "13.08.2025"
   },
   "Updates": [
     { "date": "13.08.2025", "text": "Release of V1." }
