@@ -1,11 +1,12 @@
 {
   "CSGO": {
     "status": "undetected",
-    "Stable": { "date": "13.08.2025", "url": "https://github.com/.../csgo_stable.dll" }
+    "Stable": { "date": "01.08.2025" },
+    "Beta":   { "date": "10.08.2025" }
   },
   "CS2": {
     "status": "undetected",
-    "Stable": { "date": "13.08.2025", "url": "https://github.com/.../cs2_stable.dll" }
+    "Stable": { "date": "01.08.2025" }
   },
   "Updates": [
     { "date": "13.08.2025", "text": "Release V1." }
